@@ -62,10 +62,10 @@ public abstract class SuperRecyclerViewAdapter2<M, BINDING extends ViewDataBindi
         onBindViewHolder(binding, position, datum);
     }
 
-    public abstract void onBindViewHolder(BINDING binding, int position, M datum);
-
     @LayoutRes
     public abstract int getLayoutResId();
+
+    public abstract void onBindViewHolder(BINDING binding, int position, M datum);
 
     @Override
     public int getItemCount() {

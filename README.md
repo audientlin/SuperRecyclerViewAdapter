@@ -13,7 +13,7 @@ allprojects {
 
 // 在 module 根目录的 build.gradle 中添加：
 dependencies {
-    implementation "com.audient:super_recycler_view_adapter:1.0.2"
+    implementation "com.audient:super_recycler_view_adapter:1.0.3"
 }
 ```
 
