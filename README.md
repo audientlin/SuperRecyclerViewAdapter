@@ -144,3 +144,59 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 ```
+
+## 三、如果你使用了DataBinding
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="text" type="String"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{text}"
+            tools:text="景清清"/>
+    </RelativeLayout>
+</layout>
+```
+
+```java
+package com.audient.superrecyclerviewadapter.demo;
+
+import android.content.Context;
+
+import com.audient.super_recycler_view_adapter.SuperRecyclerViewAdapter2;
+import com.audient.superrecyclerviewadapter.demo.databinding.ItemStringBinding;
+
+/**
+ * 这里Adapter的实体是什么就传入什么，这里传入String
+ * ItemStringBinding 是根据xml文件名生成的
+ */
+public class StringAdapter extends SuperRecyclerViewAdapter2<String, ItemStringBinding> {
+    public StringAdapter(Context context) {
+        super(context);
+    }
+
+    @Override
+    public void onBindViewHolder(ItemStringBinding binding, int position, String datum) {
+        binding.setText(datum);
+    }
+
+    @Override
+    public int getLayoutResId() {
+        return R.layout.item_string;
+    }
+}
+```
+
+调用方法一样。
