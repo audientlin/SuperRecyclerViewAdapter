@@ -35,7 +35,7 @@ ext {
     GITHUB_REPO_PATH = "D:\\repos"
     PUBLISH_GROUP_ID = 'com.audient'
     PUBLISH_ARTIFACT_ID = 'super_recycler_view_adapter'
-    PUBLISH_VERSION = '1.0.3'
+    PUBLISH_VERSION = '1.0.4'
 }
 
 uploadArchives {

@@ -122,14 +122,14 @@ public abstract class SuperRecyclerViewAdapter2<M, BINDING extends ViewDataBindi
 
     /////////// START: Listeners ///////////
 
-    protected SuperRecyclerViewAdapter.OnItemClickListener<M> mOnItemClickListener;
-    protected SuperRecyclerViewAdapter.OnItemLongClickListener<M> mOnItemLongClickListener;
+    protected SuperRecyclerViewAdapter2.OnItemClickListener<M> mOnItemClickListener;
+    protected SuperRecyclerViewAdapter2.OnItemLongClickListener<M> mOnItemLongClickListener;
 
-    public void setOnItemClickListener(SuperRecyclerViewAdapter.OnItemClickListener<M> onItemClickListener) {
+    public void setOnItemClickListener(SuperRecyclerViewAdapter2.OnItemClickListener<M> onItemClickListener) {
         mOnItemClickListener = onItemClickListener;
     }
 
-    public void setOnItemLongClickListener(SuperRecyclerViewAdapter.OnItemLongClickListener<M> onItemLongClickListener) {
+    public void setOnItemLongClickListener(SuperRecyclerViewAdapter2.OnItemLongClickListener<M> onItemLongClickListener) {
         mOnItemLongClickListener = onItemLongClickListener;
     }
 

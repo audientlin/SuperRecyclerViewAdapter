@@ -16,6 +16,7 @@ import java.util.List;
  * <p>
  * Created by audienl@qq.com on 2017/8/10.
  */
+@Deprecated
 public abstract class SuperRecyclerViewAdapter<M> extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     protected Context mContext;
     protected List<M> mData = new ArrayList<>();
@@ -115,6 +116,7 @@ public abstract class SuperRecyclerViewAdapter<M> extends RecyclerView.Adapter<R
         mOnItemLongClickListener = onItemLongClickListener;
     }
 
+    @Deprecated
     @FunctionalInterface
     public interface OnItemClickListener<M> {
         /**
@@ -123,6 +125,7 @@ public abstract class SuperRecyclerViewAdapter<M> extends RecyclerView.Adapter<R
         void onItemClick(View view, int position, M datum);
     }
 
+    @Deprecated
     @FunctionalInterface
     public interface OnItemLongClickListener<M> {
         /**
